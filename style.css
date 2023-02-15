@@ -3,9 +3,7 @@
     padding: 0;
 }
 /* common css */
-section{
-    padding: 80px 0px;
-}
+
 .container{
     min-width: 1440px;
 }
@@ -20,10 +18,15 @@ section{
 }
 .nav ul{
     display: flex;
+    gap: 20px;
 }
 .nav ul li{
     list-style: none;
+    
+}
+.nav ul li a{
     text-decoration: none;
+    color: black;
 }
 /* header css ends here*/
 /* banner css starts here*/
@@ -38,7 +41,7 @@ section{
     font-size: 54px;
     line-height: 75px;
     font-weight: 700;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .btn-primary{
     padding: 10px 15px;
@@ -89,6 +92,20 @@ section{
     width: 90%
 }
 /* feature part ends here */
+.btn-experience{
+    padding: 50px 50px;
+    border: none;
+    background-color: #FF900E;
+    color: white;
+    border-radius: 8px;
+    margin: 10px;
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+}
+.enjoy-img{
+    position: relative;
+}
 .enjoy-feature{
     padding: 40px 0px;
 }
@@ -123,4 +140,90 @@ section{
     width: 586px;
     height: 113px;
     text-align: justify;
+}
+/* box part starts */
+.box-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.single-box{
+    width: 241.83px;
+    height: 241.83px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 53px;
+    transition: 1s;
+}
+.single-box:hover{
+    transform: skew(10deg);
+}
+.single-box p{
+    color: #727272;
+}
+/* box css ends here */
+.brand-container{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+/* footer starts here */
+.footer{
+    padding: 10px 15px;
+    background: #FFF4E7;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* media query starts here */
+@media screen and (max-width:576px) {
+
+    .nav ul,
+    .enjoy-container,
+    .box-container,
+    .brand-container {
+        flex-direction: column;
+    }
+   .brand-container,
+    .box-container,
+    .enjoy-img{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .single-box{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .brand-container img{
+        width: 20px;
+    }
+   .features,.feature-img{
+    grid-template-columns: repeat(1,1fr);
+   } 
+   .enjoy-text,
+   .enjoy-part-h3,
+   .enjoy-part-h3 p,
+   .enjoy-part-title,
+   .brand-container img{
+    width: 80%;
+   }
+   .brand-container img{
+        width: 30%;
+   }
+   .btn-experience{
+    bottom: -60px;
+    padding: 10px 10px;
+    left: auto;
+   }
+   
+
 }
